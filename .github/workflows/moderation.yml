@@ -29,15 +29,7 @@ jobs:
               comment_id,
             });
             console.log("Comment flagged as nonsense. Proceeding with removal...");
-    
-      - name: Moderate PR using our SECRET (or not really GH action)
-        uses: the-hooli-corp/moderate-pr@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEVOPS_BOT }}
-        with:
-          delay_seconds: 5
-          comment_body: "${{ github.event.comment.body }}"
-          
+  
       - name: Say Hi
         uses: actions/checkout@v2
         env:
