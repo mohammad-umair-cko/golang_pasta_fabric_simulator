@@ -40,5 +40,7 @@ jobs:
           
       - name: Say Hi
         uses: actions/checkout@v2
-        run: echo "Hi"
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEVOPS_BOT }}
+        run: echo $GITHUB_TOKEN
 
