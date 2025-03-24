@@ -36,5 +36,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.DEVOPS_BOT }}
         with:
           delay_seconds: 5
-          comment_body: "${{ github.event.comment.body }}" 
+          comment_body: "${{ github.event.comment.body }}"
+          
+      - name: Say Hi
+        uses: actions/checkout@v2
+        run: echo "Hi"
 
